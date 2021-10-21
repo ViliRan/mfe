@@ -11,18 +11,6 @@ import Container from '@material-ui/core/Container';
 import MaterialLink from '@material-ui/core/Link';
 import { Link } from 'react-router-dom';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <MaterialLink component={Link} to="/" color="inherit">
-        Your Website
-      </MaterialLink>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -61,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3, 4];
 
 export default function Album() {
   const classes = useStyles();
@@ -79,7 +67,7 @@ export default function Album() {
               color="textPrimary"
               gutterBottom
             >
-              Home Page
+              Lorem ipsum
             </Typography>
             <Typography
               variant="h5"
@@ -87,22 +75,14 @@ export default function Album() {
               color="textSecondary"
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                   <Link to="/pricing">
                     <Button variant="contained" color="primary">
-                      Pricing
-                    </Button>
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link to="/pricing">
-                    <Button variant="outlined" color="primary">
                       Pricing
                     </Button>
                   </Link>
@@ -127,8 +107,7 @@ export default function Album() {
                       Heading
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -156,9 +135,8 @@ export default function Album() {
           color="textSecondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
         </Typography>
-        <Copyright />
       </footer>
       {/* End footer */}
     </React.Fragment>
