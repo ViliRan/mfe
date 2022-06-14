@@ -8,6 +8,7 @@ const MarketingLazy = lazy(() => import('./components/MarketingApp'))
 const AuthLazy = lazy(() => import('./components/AuthApp'))
 const DashboardLazy = lazy(() => import('./components/DashboardApp'))
 
+// generates production CSS class prefixes to avoid collisions
 const generateClassName = createGenerateClassName({
   productionPrefix: 'co'
 })
