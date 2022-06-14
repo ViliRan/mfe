@@ -7,6 +7,7 @@ export default () => {
   const history = useHistory()
 
   useEffect(() => {
+    // onParentNavigate is the callback to update the child memory router
     const { onParentNavigate } = mount(ref.current, {
       initialPath: history.location.pathname,
       onNavigate: ({ pathname: nextPathname }) => {
@@ -14,7 +15,10 @@ export default () => {
       }
     })
 
+    // listen to changes in the browser history and send it to the child
     history.listen(onParentNavigate)
+
+    // only run when child app is mounted
   }, [])
 
 

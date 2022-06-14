@@ -19,6 +19,7 @@ export default () => {
   const [isSignedIn, setIsSignedIn] = useState(false)
 
   useEffect(() => {
+    // navigate to the Vue app when user signs in
     if (isSignedIn) {
       history.push('/dashboard')
     }
